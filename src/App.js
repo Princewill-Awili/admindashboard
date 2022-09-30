@@ -1,10 +1,19 @@
+import "./App.css"
 
-import './App.css';
+import TopBar from "./components/topbar/TopBar";
+import Sidebar from "./components/sidebar/Sidebar";
+import Home from "./pages/home/Home";
+
+
 
 function App() {
   return (
     <div>
-      Hello World!
+      <TopBar/>
+      <div className="container">
+          <Sidebar/>
+          <Home/>
+      </div>
     </div>
   );
 }
