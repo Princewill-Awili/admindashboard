@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import "./topbar.css"
 
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
@@ -12,7 +13,10 @@ const TopBar = () => {
         <div className="topbarWrapper">
 
             <div className="topLeft">
-                <span className="logo">ADMIN-Tools</span>
+                <Link to="/">
+                    <span className="logo">ADMIN-Tools</span>
+                </Link>
+                
             </div>
 
             <div className="topRight">

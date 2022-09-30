@@ -1,5 +1,6 @@
 import React from 'react'
 import "./sidebar.css"
+import {Link} from 'react-router-dom';
 
 import LineStyleIcon from '@mui/icons-material/LineStyle';
 import TimelineIcon from '@mui/icons-material/Timeline';
@@ -25,8 +26,10 @@ const Sidebar = () => {
                 <ul className="sidebarList">
 
                     <li className="sidebarListItem active">
-                        <LineStyleIcon className="sidebarIcons"/>
-                        <span>Home</span>
+                        <Link to="/">
+                            <LineStyleIcon className="sidebarIcons"/>
+                            <span>Home</span>
+                        </Link>
                     </li>
 
                     <li className="sidebarListItem">
@@ -46,8 +49,11 @@ const Sidebar = () => {
                 <ul className="sidebarList">
 
                     <li className="sidebarListItem">
-                        <PersonOutlineIcon className="sidebarIcons"/>
-                        <span>Users</span>
+                        <Link to="/users">
+                            <PersonOutlineIcon className="sidebarIcons"/>
+                            <span>Users</span>
+                        </Link>
+                        
                     </li>
 
                     <li className="sidebarListItem">
