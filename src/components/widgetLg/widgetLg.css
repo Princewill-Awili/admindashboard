@@ -1,0 +1,66 @@
+.widgetLg{
+    flex: 2;
+    box-shadow: 0px 0px 15px -1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow:0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    padding: 20px;
+}
+
+.widgetLgTitle{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.widgetLgTable{
+    width: 100%;
+    border-spacing: 20px;
+}
+
+.widgetLgTh{
+    text-align: left;
+}
+
+.widgetLgUser{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+.widgetLgImage{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.widgetLgDate, .widgetLgAmt{
+    font-weight: 300;
+}
+
+.widgetLgButton{
+    padding: 5px 7px;
+    border-radius: 10px;
+    border: none;
+}
+
+.widgetLgButton.Approved{
+    background-color: lightgreen;
+    color:darkgreen
+}
+
+.widgetLgButton.Pending{
+    background-color: lightgray;
+    color:gray
+    
+}
+
+.widgetLgButton.Declined{
+    background-color: pink;
+    color:darkred;
+}
