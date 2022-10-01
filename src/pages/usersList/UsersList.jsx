@@ -1,3 +1,4 @@
+import {useState} from 'react'
 import './usersList.css'
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import { userRows } from '../../dummyData';
@@ -6,6 +7,12 @@ import { Link } from "react-router-dom"
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 
 const UsersList = () => {
+
+    const [data, setData] = useState(userRows);
+
+    const handleDelete = (id) => {
+        setData(data.filter(item => item.id !== id))
+    }
 
     const columns: GridColDef[] = [
         { field: 'id', headerName: 'ID', width: 70 },
@@ -23,10 +30,13 @@ const UsersList = () => {
         {field:'action', headerName:'Action', width: 160, renderCell: (params) =>{
             return(
                 <>
-                     <Link to={"/user/"+params.row.id}>
+                     <Link to={"/users/"+params.row.id}>
                         <button className="userListEdit">Edit</button>
                      </Link>
-                     <DeleteOutlineIcon className="userListDelete"/>
+                     <DeleteOutlineIcon 
+                        className="userListDelete"
+                        onClick={()=>handleDelete(params.row.id)}
+                    />
                 </>
                
             )
@@ -40,7 +50,7 @@ const UsersList = () => {
         return (
             <div style={{ height: 400, width: '100%' }}>
                 <DataGrid
-                    rows={userRows}
+                    rows={data}
                     columns={columns}
                     pageSize={10}
                     rowsPerPageOptions={[10]}
