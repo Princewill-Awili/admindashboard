@@ -57,8 +57,10 @@ const Sidebar = () => {
                     </li>
 
                     <li className="sidebarListItem">
-                        <StorefrontIcon className="sidebarIcons"/>
-                        <span>Products</span>
+                        <Link to="/products">
+                            <StorefrontIcon className="sidebarIcons"/>
+                            <span>Products</span>
+                        </Link>
                     </li>
 
                     <li className="sidebarListItem">
